@@ -1,6 +1,6 @@
 # AV3
-A AV3 terá duração de 6 semanas, deve ser entregue até a meia noite do dia 27/03/2025.
-Cada aluno deve criar um fork deste repositório e modificá-la de acordo com a proposta escolhida abaixo, após a conclusão deverá abrir um pull-request de volta para este repositório.
+A AV3 terá duração de 6 semanas, deve ser entregue até a meia noite do dia 27/03/2025.  
+Cada aluno deve criar um fork deste repositório e modificá-la de acordo com a proposta escolhida abaixo, após a conclusão deverá abrir um pull-request de volta para este repositório.  
 Para melhor aproveitamento, utilize o tutorial sobre o [ambiente de desenvolvimento](https://github.com/prof-hfabio/ambiente) para se ambientar, será proveitoso para o resto da disciplina (e possivelmente para a sua carreira)
 
 - [Proposta 1 - Clone do Twitter ou spotify](#proposta-1)
