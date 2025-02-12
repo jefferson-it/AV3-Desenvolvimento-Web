@@ -3,7 +3,7 @@ A AV3 terá duração de 6 semanas, deve ser entregue até a meia noite do dia 2
 Cada aluno deve criar um fork deste repositório e modificá-la de acordo com a proposta escolhida abaixo, após a conclusão deverá abrir um pull-request de volta para este repositório.  
 Para melhor aproveitamento, utilize o tutorial sobre o [ambiente de desenvolvimento](https://github.com/prof-hfabio/ambiente) para se ambientar, será proveitoso para o resto da disciplina (e possivelmente para a sua carreira)
 
-- [Proposta 1 - Clone do Twitter ou spotify](#proposta-1)
+- [Proposta 1 - Clone do Twitter](#proposta-1)
 - [Proposta 2 - Sistema de Blog Colaborativo](#proposta-2)
 - [Proposta 3 - Aplicação de E-commerce Simples](#proposta-3)
 
