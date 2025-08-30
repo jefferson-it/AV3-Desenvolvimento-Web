@@ -1,0 +1,26 @@
+{
+  "name": "it-bahia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_ENV=development node --watch .",
+    "start": "NODE_ENV=production node ."
+  },
+  "keywords": [],
+  "author": "Jefferson Silva de Souza",
+  "contributors": [
+    "Otávio Neto"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@types/mongodb": "^4.0.7",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "mongodb": "^6.19.0",
+    "zod": "^4.1.4"
+  }
+}
