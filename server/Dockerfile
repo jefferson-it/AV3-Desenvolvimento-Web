@@ -7,4 +7,7 @@ RUN npm install --save
 
 COPY . .
 
+ENV SECRET=app-app-app
+ENV SESSION_SECRET=senha-super-secreta-talvez-no
+
 CMD [ "npm", "run", "start" ]

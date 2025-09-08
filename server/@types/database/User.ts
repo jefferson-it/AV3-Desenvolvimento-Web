@@ -1,3 +1,4 @@
+import { Moment } from "moment-timezone"
 import { ObjectId } from "mongodb"
 
 export interface User {
@@ -5,11 +6,8 @@ export interface User {
     name: string
     email: string
     password: string
-}
-
-interface Token {
-    to: string
-    type: 'auth' | 'data'
-    jwt: string
-    expire_at: Date
+    username: string
+    token: string,
+    created_at: Moment
+    updated_at: Moment
 }
