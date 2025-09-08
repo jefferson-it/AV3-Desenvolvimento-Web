@@ -10,12 +10,13 @@ export const passwordRegex = {
 
 export const zUserRegister = z.object({
     email: z.email(),
-    password: z.string().transform(v => v.trim())
+    password: z.string()
         .min(8, "A senha deve ter no mínimo 8 caracteres")
         .refine(val => /[a-z]/.test(val), "Deve conter ao menos uma letra minúscula")
         .refine(val => /[A-Z]/.test(val), "Deve conter ao menos uma letra maiúscula")
         .refine(val => /\d/.test(val), "Deve conter ao menos um número")
-        .refine(val => /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(val), "Deve conter ao menos um caractere especial"),
+        .refine(val => /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(val), "Deve conter ao menos um caractere especial")
+        .transform(v => v.trim()),
     name: z.string().min(5),
     username: z.string().min(5).transform(v => v.toLowerCase().trim())
 });

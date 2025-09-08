@@ -1,4 +1,4 @@
-import { getCollection, toObjectId } from "../../database/database";
+import { getCollection, toObjectId } from "../../database/database.js";
 
 const FeedBackColl = getCollection('feedbacks');
 

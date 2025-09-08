@@ -1,7 +1,8 @@
-import { getCollection } from "../../database/database";
-import { zUserRegister } from "./validators";
+import { getCollection } from "../../database/database.js";
+import { zUserRegister } from "./validators.js";
 import { genSaltSync, hashSync } from "bcryptjs";
-import { sign } from "jsonwebtoken";
+import pkg from 'jsonwebtoken';
+const { sign } = pkg;
 
 const UsersColl = getCollection('users');
 
@@ -62,20 +63,22 @@ export const userRegisterRouter = async (req, res) => {
      * @type {import("../../@types/database/User").User}
      */
     const user = {
-        ...parseResult.data.name,
+        ...parseResult.data,
         password: hashSync(req.body.password, genSaltSync(10)),
         created_at: new Date(),
         token: sign({
-            username: user.username,
+            username: parseResult.data.username,
         }, process.env.SECRET, { expiresIn: '30m' })
     }
 
     const result = await UsersColl.insertOne(user)
 
-    res.headers.set(
-        'Set-Cookie',
-        `tkn-auth=${user.token}; Path=/; HttpOnly; Secure; SameSite=Strict; Max-Age=1800`
-    );
+    res.cookie('tkn-auth', user.token, {
+        httpOnly: true,
+        secure: true,
+        sameSite: 'strict',
+        maxAge: 1800 * 1000 // Max-Age em milissegundos
+    });
 
 
     req.session.user = {

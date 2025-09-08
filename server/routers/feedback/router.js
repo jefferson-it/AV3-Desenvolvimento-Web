@@ -1,18 +1,18 @@
 
 import { Router } from 'express';
-import { isAuth } from "../users/middleware";
-import { newFeedBack } from './create';
-import { deleteFeedback } from './delete';
-import { getFeedBackInPost, getFeedBackOne } from './get';
+import { isAuth } from "../users/middleware.js";
+import { newFeedBack } from './create.js';
+import { deleteFeedback } from './delete.js';
+import { getFeedBackInPost, getFeedBackOne } from './get.js';
 
-const feedBack = Router();
+const feedBackRouter = Router();
 
 // Rotas
-feedBack.get('/:postId', getFeedBackInPost);
-feedBack.get('/:id', getFeedBackOne);
+feedBackRouter.get('/:postId', getFeedBackInPost);
+feedBackRouter.get('/:id', getFeedBackOne);
 
-feedBack.post('/:postId', isAuth, newFeedBack);
+feedBackRouter.post('/:postId', isAuth, newFeedBack);
 
-feedBack.delete('/:id', isAuth, deleteFeedback);
+feedBackRouter.delete('/:id', isAuth, deleteFeedback);
 
-export default feedBack;
+export default feedBackRouter;

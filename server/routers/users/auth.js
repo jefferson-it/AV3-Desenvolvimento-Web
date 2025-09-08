@@ -1,7 +1,9 @@
-import { getCollection } from "../../database/database";
-import { zUserLogin, } from "./validators";
+import { getCollection } from "../../database/database.js";
+import { zUserLogin, } from "./validators.js";
 import { compareSync } from "bcryptjs";
-import { sign } from "jsonwebtoken";
+import pkg from 'jsonwebtoken';
+const { sign } = pkg;
+
 
 const UsersColl = getCollection('users');
 

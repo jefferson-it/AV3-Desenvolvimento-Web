@@ -1,7 +1,5 @@
 import uuid4 from "uuid4";
-import { getCollection, toObjectId } from "../../database/database";
-import { zPostsCreate } from "./validators";
-
+import { getCollection, toObjectId } from "../../database/database.js";
 
 const PostsColl = getCollection('posts');
 

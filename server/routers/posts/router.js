@@ -1,11 +1,11 @@
 
 import { Router } from 'express';
-import { isAuth } from "../users/middleware";
-import { editPost } from "./edit";
-import { createPost } from "./create";
-import { deletePost } from './delete';
-import { likePost } from './toggle-like';
-import { getListPost, getOnePost } from './get';
+import { isAuth } from "../users/middleware.js";
+import { editPost } from "./edit.js";
+import { createPost } from "./create.js";
+import { deletePost } from './delete.js';
+import { likePost } from './toggle-like.js';
+import { getListPost, getOnePost } from './get.js';
 
 const postRouter = Router();
 

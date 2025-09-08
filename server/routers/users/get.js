@@ -1,4 +1,4 @@
-import { getCollection, processQuery } from "../../database/database";
+import { getCollection, processProjection, processQuery } from "../../database/database.js";
 
 const UsersColl = getCollection('users');
 

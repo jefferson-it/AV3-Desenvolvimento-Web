@@ -1,5 +1,7 @@
 import { Router } from "express";
-import userRouter from "./users/router";
+import userRouter from "./users/router.js";
+import postRouter from "./posts/router.js";
+import feedBackRouter from "./feedback/router.js";
 
 const apiRouter = Router();
 
@@ -19,5 +21,7 @@ apiRouter.use((req, res, next) => {
 });
 
 apiRouter.use('/user', userRouter);
+apiRouter.use('/post', postRouter);
+apiRouter.use('/feedback', feedBackRouter);
 
 export default apiRouter;

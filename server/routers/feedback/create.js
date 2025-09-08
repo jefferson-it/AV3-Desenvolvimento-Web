@@ -1,4 +1,4 @@
-import { getCollection } from "../../database/database";
+import { getCollection } from "../../database/database.js";
 
 const PostsColl = getCollection('posts');
 const FeedBackColl = getCollection('feedbacks');

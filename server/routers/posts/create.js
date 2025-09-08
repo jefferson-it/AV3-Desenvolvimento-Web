@@ -1,5 +1,5 @@
-import { getCollection } from "../../database/database";
-import { zPostsCreate } from "./validators";
+import { getCollection } from "../../database/database.js";
+import { zPostsCreate } from "./validators.js";
 import uuid4 from "uuid4";
 
 const PostsColl = getCollection('posts');

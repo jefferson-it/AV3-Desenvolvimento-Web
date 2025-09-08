@@ -1,9 +1,9 @@
-import { getCollection } from "../../database/database";
+import { getCollection } from "../../database/database.js";
 import { Router } from 'express';
-import { userRegisterRouter } from "./register";
-import { userLoginRouter } from "./auth";
-import { getListUser, getOneUser } from "./get";
-import { noNeedAuth } from "./middleware";
+import { userRegisterRouter } from "./register.js";
+import { userLoginRouter } from "./auth.js";
+import { getListUser, getOneUser } from "./get.js";
+import { noNeedAuth } from "./middleware.js";
 
 const UsersColl = getCollection('users');
 const userRouter = Router();

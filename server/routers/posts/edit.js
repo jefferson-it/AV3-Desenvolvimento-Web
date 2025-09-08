@@ -1,6 +1,6 @@
 import uuid4 from "uuid4";
-import { getCollection } from "../../database/database";
-import { zPostsCreate } from "./validators";
+import { getCollection } from "../../database/database.js";
+import { zPostsCreate } from "./validators.js";
 
 const PostsColl = getCollection('posts');
 
