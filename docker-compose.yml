@@ -4,19 +4,11 @@ services:
     build: ./server
     ports:
       - 3000:3000
-    depends_on:
-      - frontend
     volumes:
       - uploads_data:/upload
       - tmp_data:/tmp
     environment:
       - MONGO_URL=mongodb://database:27017/app
-
-  frontend:
-    build: ./client
-    ports:
-      - 3001:3001
-
       
   database:
     image: mongo:6.0.26-jammy

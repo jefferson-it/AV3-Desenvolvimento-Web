@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Exclusão - IT Bahia</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        const postId = "$post_id$";
+    </script>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <a href="/" class="logo">IT Bahia</a>
+            <nav class="nav-links">
+                <a href="/">Início</a>
+                $profile$
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="form-card confirmation-card">
+            <h1 class="card-title delete-title">Excluir Postagem</h1>
+            <p class="card-subtitle delete-subtitle">
+                Tem certeza que deseja excluir esta postagem?
+                Esta ação não pode ser desfeita.
+            </p>
+            <div class="button-group">
+                <button id="delete-post" class="btn btn-danger">Sim, Excluir</button>
+                <a href="/post/editar/$post_id$" class="btn btn-success">Não, Cancelar</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const deleteBtn = document.querySelector('#delete-post');
+
+        deleteBtn.addEventListener('click', async e => {
+            const response = await fetch(`/api/post/${postId}`, {
+                method: 'DELETE',
+                headers: {
+                    'content-type': 'application/json'
+                }
+            });
+
+            const jsonResponse = await response.json();
+
+            if (jsonResponse.flash) alert(`${jsonResponse.flash.type}: ${jsonResponse.flash.message}`);
+            if (jsonResponse.success) {
+                window.location.href = `/`;
+            }
+
+        })
+    </script>
+</body>
+
+</html>
