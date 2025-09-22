@@ -5,6 +5,7 @@
 Equipe: Jefferson Silva, Otávio Neto, Railan Santos
 
 O projeto é uma aplicação web desenvolvida como parte da avaliação da disciplina de Programação Web. Segundo o [repositório](https://github.com/prof-hfabio/AV3?tab=readme-ov-file#proposta-2) do professor, minha equipe escolheu a proposta 2, que diz:
+
 ```
 Descrição: O aluno deverá criar uma aplicação de blog online O projeto deve conter:
 
