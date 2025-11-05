@@ -1,0 +1,31 @@
+
+services:
+  backend:
+    build: ./server
+    ports:
+      - 3000:3000
+    volumes:
+      - uploads_data:/upload
+      - tmp_data:/tmp
+    environment:
+      - MONGO_URL=mongodb://database:27017/app
+      
+  database:
+    image: mongo:6.0.26-jammy
+    ports:
+      - 27018:27017
+    volumes:
+      - mongodb_data:/data/db
+  database-sec:
+    image: mongo:6.0.26-jammy
+    ports:
+      - 27019:27017
+    volumes:
+      - mongodb_sec_data:/data/db
+      
+
+volumes:
+  mongodb_data:
+  mongodb_sec_data:
+  uploads_data:
+  tmp_data:
